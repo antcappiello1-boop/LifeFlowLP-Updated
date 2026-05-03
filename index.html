@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeFlow Agents | Life Insurance Coverage Options</title>
+  <meta name="description" content="Request simple life insurance and final expense coverage options. Submit your information and a licensed agent can help you review available coverage.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body { background: #f5f7fb; color: #111827; min-height: 100vh; }
+    .page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 18px; }
+    .container { width: 100%; max-width: 1080px; display: grid; grid-template-columns: 1.05fr 0.95fr; background: #fff; border-radius: 28px; overflow: hidden; box-shadow: 0 24px 70px rgba(15,23,42,.12); }
+    .hero { padding: 56px; background: linear-gradient(135deg,#0f172a 0%,#1e3a8a 55%,#2563eb 100%); color: #fff; display: flex; flex-direction: column; justify-content: center; }
+    .badge { display: inline-block; width: fit-content; padding: 8px 14px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; font-size: 13px; margin-bottom: 22px; background: rgba(255,255,255,.1); }
+    h1 { font-size: 46px; line-height: 1.05; margin-bottom: 18px; letter-spacing: -1.2px; }
+    .hero p { font-size: 18px; line-height: 1.65; color: #dbeafe; max-width: 520px; margin-bottom: 30px; }
+    .points { display: grid; gap: 14px; margin-top: 10px; }
+    .point { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: #eff6ff; }
+    .check { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; background: #22c55e; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: bold; color: white; }
+    .form-wrap { padding: 44px; }
+    .form-card h2 { font-size: 28px; margin-bottom: 8px; color: #0f172a; }
+    .form-card .subtext { font-size: 15px; color: #64748b; line-height: 1.5; margin-bottom: 28px; }
+    form { display: grid; gap: 16px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { font-size: 13px; font-weight: 700; color: #334155; margin-bottom: 7px; display: block; }
+    input, select { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #dbe3ef; border-radius: 12px; font-size: 15px; color: #0f172a; background: #fff; outline: none; transition: .2s ease; }
+    input:focus, select:focus { border-color: #2563eb; box-shadow: 0 0 0 4px rgba(37,99,235,.12); }
+    .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; line-height: 1.45; color: #64748b; margin-top: 2px; }
+    .consent input { width: 18px; height: 18px; margin-top: 1px; min-width: 18px; }
+    button { height: 54px; border: none; border-radius: 14px; background: #2563eb; color: #fff; font-size: 16px; font-weight: 800; cursor: pointer; transition: .2s ease; margin-top: 4px; }
+    button:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .privacy { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 16px; line-height: 1.45; }
+    @media (max-width: 860px) { .container { grid-template-columns: 1fr; } .hero { padding: 40px 28px; } h1 { font-size: 36px; } .form-wrap { padding: 32px 24px; } }
+    @media (max-width: 520px) { .row { grid-template-columns: 1fr; } h1 { font-size: 31px; } .hero p { font-size: 16px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="container">
+      <div class="hero">
+        <div class="badge">LifeFlow Agents</div>
+        <h1>Protect your family from final expenses.</h1>
+        <p>See what life insurance options may be available to you. It only takes a minute to request information, and there are no medical exam options available.</p>
+        <div class="points">
+          <div class="point"><span class="check">✓</span><span>Coverage options for final expenses, family protection, and more.</span></div>
+          <div class="point"><span class="check">✓</span><span>Simple request form with no obligation to buy.</span></div>
+          <div class="point"><span class="check">✓</span><span>A licensed agent may contact you to review available options.</span></div>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <div class="form-card">
+          <h2>Request Coverage Info</h2>
+          <p class="subtext">Fill out the form below and a licensed agent can help you review options based on your age, state, and coverage goals.</p>
+          <form id="lead-form" action="https://formspree.io/f/mlgzeoby" method="POST">
+            <input type="hidden" name="_subject" value="New LifeFlow Agents Lead" />
+            <input type="hidden" name="_redirect" value="https://lifeflowagents.com/thank-you.html" />
+<div class="row">
+              <div><label for="firstName">First Name</label><input id="firstName" name="first_name" type="text" placeholder="John" required /></div>
+              <div><label for="lastName">Last Name</label><input id="lastName" name="last_name" type="text" placeholder="Smith" required /></div>
+            </div>
+            <div class="row">
+              <div><label for="age">Age</label><input id="age" name="age" type="number" min="18" max="90" placeholder="65" required /></div>
+              <div><label for="state">State</label><select id="state" name="state" required><option value="">Select state</option><option>NJ</option><option>FL</option><option>NY</option><option>PA</option><option>NC</option><option>GA</option><option>TX</option></select></div>
+            </div>
+            <div><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" placeholder="732-555-1234" required /></div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="john@email.com" />
+            </div>
+            <div><label for="insuranceType">Type of Life Insurance Interested In</label><select id="insuranceType" name="insurance_type" required>
+                  <option value="">Select one</option>
+                  <option value="Final Expense Burial Coverage">Final Expense / Burial Coverage</option>
+                  <option value="Whole Life">Whole Life</option>
+                  <option value="Term Life">Term Life</option>
+                  <option value="Mortgage Protection">Mortgage Protection</option>
+                  <option value="Not Sure Yet">Not Sure Yet</option>
+                </select></div>
+            <div><label for="coverageAmount">Coverage Amount Desired</label><select id="coverageAmount" name="coverage_amount" required>
+                  <option value="">Select coverage amount</option>
+                  <option value="5000">$5,000</option>
+                  <option value="10000">$10,000</option>
+                  <option value="15000">$15,000</option>
+                  <option value="20000">$20,000</option>
+                  <option value="25000">$25,000</option>
+                  <option value="50000">$50,000+</option>
+                  <option value="Not Sure Yet">Not Sure Yet</option>
+                </select></div>
+            <label class="consent"><input type="checkbox" name="consent" value="yes" required /><span>I agree to be contacted by a licensed insurance agent by phone, text, or email regarding life insurance coverage options. Message and data rates may apply.</span></label>
+            <button type="submit" onclick="if(window.fbq){fbq(\'track\', \'Lead\')}">See My Options</button>
+          </form>
+          <p class="privacy">Your information is kept private and used only to help review coverage options. Submitting this form does not require you to purchase coverage.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
